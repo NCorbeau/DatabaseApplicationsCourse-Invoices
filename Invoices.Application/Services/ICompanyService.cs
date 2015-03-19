@@ -15,4 +15,4 @@ namespace Invoices.Application.Services
 
         Company GetCompany(uint id);
     }
-}
+} 

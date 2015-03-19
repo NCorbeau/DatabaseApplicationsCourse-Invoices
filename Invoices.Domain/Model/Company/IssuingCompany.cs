@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Invoices.Domain.Model.Company
 {
-    class IssuingCompany : Company
+    public class IssuingCompany : Company
     {
         IList<Company> Customers { get; set; }
     }
