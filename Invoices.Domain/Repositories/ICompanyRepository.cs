@@ -1,5 +1,5 @@
-﻿using Invoices.Domain.Model.Company;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Invoices.Domain.Model.Company;
 
 namespace Invoices.Domain.Repositories
 {

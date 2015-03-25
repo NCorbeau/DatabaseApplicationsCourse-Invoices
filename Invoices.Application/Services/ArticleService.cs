@@ -1,13 +1,39 @@
-﻿using Invoices.Domain.Model.Article;
-using Invoices.Domain.Repositories;
-using System;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Invoices.Domain.Model.Article;
+using Invoices.Domain.Repositories;
 
 namespace Invoices.Application.Services
 {
+    class C : IEnumerator<int>
+    {
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool MoveNext()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Reset()
+        {
+            throw new NotImplementedException();
+        }
+
+        public int Current
+        {
+            get { throw new NotImplementedException(); }
+        }
+
+        object IEnumerator.Current
+        {
+            get { return Current; }
+        }
+    }
+
     class ArticleService : IArticleService
     {
         private readonly IArticleRepository _articleRepository;

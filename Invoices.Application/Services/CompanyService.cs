@@ -1,10 +1,5 @@
 ﻿using Invoices.Domain.Model.Company;
 using Invoices.Domain.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Invoices.Application.Services
 {

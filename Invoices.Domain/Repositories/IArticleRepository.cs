@@ -1,6 +1,5 @@
-﻿using Invoices.Domain.Model.Article;
-using Invoices.Domain.Model.Invoice;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using Invoices.Domain.Model.Article;
 
 namespace Invoices.Domain.Repositories
 {

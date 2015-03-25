@@ -1,7 +1,7 @@
-﻿using Invoices.Domain.Model.Company;
+﻿using System.Collections.Generic;
+using Invoices.Domain.Model.Company;
 using Invoices.Domain.Model.Invoice;
 using Invoices.Domain.Repositories;
-using System.Collections.Generic;
 
 namespace Invoices.Application.Services
 {

@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Invoices.Domain.Model.Invoice;
-using Invoices.Domain.Model.Article;
+﻿using System.Collections.Generic;
 using Invoices.Domain.Model.Company;
+using Invoices.Domain.Model.Invoice;
 
 namespace Invoices.Application.Services
 {
