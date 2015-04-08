@@ -1,4 +1,4 @@
-﻿using Invoices.Domain.Model.Company;
+﻿using Invoices.Domain.Model;
 using Invoices.Domain.Repositories;
 
 namespace Invoices.Application.Services

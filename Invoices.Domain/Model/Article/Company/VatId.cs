@@ -1,4 +1,4 @@
-﻿namespace Invoices.Domain.Model.Company
+﻿namespace Invoices.Domain.Model
 {
     public class VatId
     {

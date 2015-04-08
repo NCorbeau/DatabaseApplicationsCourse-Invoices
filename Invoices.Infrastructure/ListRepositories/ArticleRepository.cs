@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Invoices.Domain.Model.Article;
+using Invoices.Domain.Model;
 
 namespace Invoices.Domain.Repositories
 {

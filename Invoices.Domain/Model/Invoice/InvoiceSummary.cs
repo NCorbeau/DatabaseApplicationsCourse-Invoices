@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Invoices.Domain.Model.Invoice
+namespace Invoices.Domain.Model
 {
     public class InvoiceSummary
     {

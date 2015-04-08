@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Invoices.Domain.Model.Article;
+using Invoices.Domain.Model;
 
 namespace Invoices.Domain.Repositories
 {

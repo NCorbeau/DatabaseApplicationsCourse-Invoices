@@ -1,6 +1,6 @@
-﻿namespace Invoices.Domain.Model.Invoice
+﻿namespace Invoices.Domain.Model
 {
-    public class IssuerPerson
+    public class IssuingPerson
     {
         public Role Role { get; set; }
         public string IssuerId { get; set; }

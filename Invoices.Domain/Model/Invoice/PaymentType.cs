@@ -1,4 +1,4 @@
-﻿namespace Invoices.Domain.Model.Invoice
+﻿namespace Invoices.Domain.Model
 {
     public enum PaymentType
     {
