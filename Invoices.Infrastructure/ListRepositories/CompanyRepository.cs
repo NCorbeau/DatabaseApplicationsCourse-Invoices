@@ -10,7 +10,63 @@ namespace Invoices.Domain.Repositories
 
         public CompanyRepository()
         {
-            _companyList = new List<Company>();
+            _companyList = new List<Company>
+            {
+                new Company
+                {
+                    CompanyId = 1,
+                    Name = "Testowa firma",
+                    Address = new Address
+                    {
+                        City = "Wrocław",
+                        PostCode = "43-412",
+                        Country = "Poland",
+                        Street = "Szczytnicka 40"
+                    },
+                    BankAccount = new BankAccount
+                    {
+                        AccountNumber = "214215321523512",
+                        BankName = "Bank Testowy"
+                    },
+                    Contact = new Contact
+                    {
+                        Email = "test@test.te",
+                        FaxNumber = "1443243214",
+                        PhoneNumber = "432142342"
+                    },
+                    VatId = new VatId
+                    {
+                        PolishVatId = "4141234124"
+                    }
+                },
+                new Company
+                {
+                    CompanyId = 2,
+                    Name = "Inna firma",
+                    Address = new Address
+                    {
+                        City = "Warszawa",
+                        PostCode = "03-412",
+                        Country = "Poland",
+                        Street = "Wrocławska 40"
+                    },
+                    BankAccount = new BankAccount
+                    {
+                        AccountNumber = "12351252352",
+                        BankName = "Bank Testowy"
+                    },
+                    Contact = new Contact
+                    {
+                        Email = "test@mail.te",
+                        FaxNumber = "23515251235",
+                        PhoneNumber = "63642362"
+                    },
+                    VatId = new VatId
+                    {
+                        PolishVatId = "2634623623"
+                    }
+                }
+            };
         }
 
         public void Insert(Company company)

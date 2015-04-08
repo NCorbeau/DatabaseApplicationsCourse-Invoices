@@ -19,8 +19,23 @@ namespace Invoices.Domain.Repositories
                     Price = new Price
                     {
                         Currency = Currency.Pln,
+                        NetAmount = 2.0,
+                        Tax = Tax.Low,
+                    },
+                    Unit = Unit.Kilogram
+                },
 
-                    }
+                new Article
+                {
+                    ArticleId = 2, 
+                    Name = "Sweter", 
+                    Price = new Price
+                    {
+                        Currency = Currency.Pln,
+                        NetAmount = 100.0,
+                        Tax = Tax.High
+                    },
+                    Unit = Unit.Piece
                 }
             };
         }

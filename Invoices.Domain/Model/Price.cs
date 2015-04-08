@@ -4,8 +4,8 @@
     {
         private double _netAmount;
         private double _grossAmount;
+
         public Currency Currency { get; set; }
-        
         public Tax? Tax { get; set; }
 
         public double NetAmount
