@@ -41,7 +41,9 @@
   <ItemGroup>
     <Compile Include="Model\Article\Article.cs" />
     <Compile Include="Model\Article\Company\IssuingCompany.cs" />
+    <Compile Include="Model\Article\Unit.cs" />
     <Compile Include="Model\Invoice\Role.cs" />
+    <Compile Include="Model\TaxCalculator.cs" />
     <Compile Include="Repositories\IArticleRepository.cs" />
     <Compile Include="Repositories\ICompanyRepository.cs" />
     <Compile Include="Model\Currency.cs" />

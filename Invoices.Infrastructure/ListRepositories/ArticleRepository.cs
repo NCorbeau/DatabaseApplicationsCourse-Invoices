@@ -10,7 +10,19 @@ namespace Invoices.Domain.Repositories
 
         public ArticleRepository()
         {
-            _articleList = new List<Article>();
+            _articleList = new List<Article>
+            {
+                new Article
+                {
+                    ArticleId = 1, 
+                    Name = "Ziemniaki", 
+                    Price = new Price
+                    {
+                        Currency = Currency.Pln,
+
+                    }
+                }
+            };
         }
 
         public void Insert(Article article)
