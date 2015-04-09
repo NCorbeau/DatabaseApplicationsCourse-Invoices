@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using Invoices.Domain.Model;
 using Invoices.Domain.Repositories;
 

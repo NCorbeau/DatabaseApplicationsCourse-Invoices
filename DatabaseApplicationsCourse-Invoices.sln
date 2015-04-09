@@ -25,6 +25,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interfaces", "Interfaces", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Invoices.Presentation.ConsoleApp", "Invoices.Presentation.ConsoleApp\Invoices.Presentation.ConsoleApp.csproj", "{F3B1449D-DEAA-4028-8000-8906B1CAFB63}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{42509262-2146-4AA9-911C-CF135F0E78DA}"
+	ProjectSection(SolutionItems) = preProject
+		Database\Invoices.mdf = Database\Invoices.mdf
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
