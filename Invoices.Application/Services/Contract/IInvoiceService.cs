@@ -3,11 +3,11 @@ using Invoices.Domain.Model;
 
 namespace Invoices.Application.Services
 {
-    interface IInvoiceService
+    public interface IInvoiceService
     {
-        void IssueInvoice(Invoice invoice);
+        void AddInvoice(Invoice invoice);
 
-        Invoice GetInvoice(uint id);
+        Invoice GetInvoice(int id);
 
         IList<Invoice> GetAllForCompany(Company company);
     }

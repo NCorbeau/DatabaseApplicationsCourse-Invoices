@@ -2,8 +2,8 @@
 {
     public class IssuingPerson
     {
-        public Role Role { get; set; }
-        public string IssuerId { get; set; }
-        public string Name { get; set; }
+        public virtual Role Role { get; set; }
+        public virtual string IssuerId { get; set; }
+        public virtual string Name { get; set; }
     }
 }

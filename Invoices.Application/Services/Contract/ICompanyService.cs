@@ -2,12 +2,12 @@
 
 namespace Invoices.Application.Services
 {
-    interface ICompanyService
+    public interface ICompanyService
     {
         void AddCompany(Company company);
 
-        void DeleteCompany(Company company);
+        void ArchiveCompany(Company company);
 
-        Company GetCompany(uint id);
+        Company GetCompany(int id);
     }
 } 

@@ -4,6 +4,7 @@
     {
         Pln,
         Usd,
-        Eur
+        Eur,
+        NotDefined
     }
 }

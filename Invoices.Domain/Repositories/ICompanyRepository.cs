@@ -6,8 +6,8 @@ namespace Invoices.Domain.Repositories
     public interface ICompanyRepository
     {
         void Insert(Company company);
-        void Delete(uint id);
-        Company Find(uint id);
+        void Archive(int id);
+        Company Find(int id);
         IList<Company> FindAll();
     }
 }

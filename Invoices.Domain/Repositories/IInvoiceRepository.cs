@@ -7,6 +7,7 @@ namespace Invoices.Domain.Repositories
     {
         void Insert(Invoice invoice);
         IList<Invoice> FindAllForCompany(Company company);
-        Invoice Find(uint id);
+        Invoice Find(int id);
+        int GetNextId();
     }
 }

@@ -1,9 +1,10 @@
-﻿using Invoices.Domain.Model;
+﻿using System;
+using Invoices.Domain.Model;
 using Invoices.Domain.Repositories;
 
 namespace Invoices.Application.Services
 {
-    class CompanyService : ICompanyService
+    public class CompanyService : ICompanyService
     {
         private readonly ICompanyRepository _companyRepository;
 
@@ -14,15 +15,21 @@ namespace Invoices.Application.Services
 
         public void AddCompany(Company company)
         {
+            if (GetCompany(company.CompanyId) != null)
+                throw new ArgumentException("Company exists already");
+
             _companyRepository.Insert(company);
         }
 
-        public void DeleteCompany(Company company)
+        public void ArchiveCompany(Company company)
         {
-            _companyRepository.Delete(company.CompanyId);
+            if(GetCompany(company.CompanyId) == null)
+                throw new ArgumentException("Company does not exist");
+
+            _companyRepository.Archive(company.CompanyId);
         }
 
-        public Company GetCompany(uint id)
+        public Company GetCompany(int id)
         {
             return _companyRepository.Find(id);
         }

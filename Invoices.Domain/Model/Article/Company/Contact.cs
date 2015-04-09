@@ -2,8 +2,9 @@
 {
     public class Contact
     {
-        public string PhoneNumber { get; set; }
-        public string Email { get; set; }
-        public string FaxNumber { get; set; }
+        public virtual int ContactId { get; set; }
+        public virtual string PhoneNumber { get; set; }
+        public virtual string Email { get; set; }
+        public virtual string FaxNumber { get; set; }
     }
 }

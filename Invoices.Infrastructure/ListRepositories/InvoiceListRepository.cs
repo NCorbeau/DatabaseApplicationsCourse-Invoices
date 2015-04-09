@@ -4,11 +4,11 @@ using Invoices.Domain.Model;
 
 namespace Invoices.Domain.Repositories
 {
-    public class InvoiceRepository : IInvoiceRepository
+    public class InvoiceListRepository : IInvoiceRepository
     {
         private readonly List<Invoice> _invoiceList;
 
-        public InvoiceRepository()
+        public InvoiceListRepository()
         {
             _invoiceList = new List<Invoice>();
         }
@@ -23,9 +23,14 @@ namespace Invoices.Domain.Repositories
             return _invoiceList.Where(i => i.Issuer == company).ToList();
         }
 
-        public Invoice Find(uint id)
+        public Invoice Find(int id)
         {
             return _invoiceList.FirstOrDefault(i => i.InvoiceId == id);
+        }
+
+        public int GetNextId()
+        {
+            return _invoiceList.OrderBy(i => i.InvoiceId).Last().InvoiceId + 1;
         }
     }
 }

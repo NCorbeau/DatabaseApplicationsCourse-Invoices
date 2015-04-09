@@ -5,11 +5,13 @@ namespace Invoices.Domain.Model
 {
     public class CorrectingInvoice : Invoice
     {
-        public CorrectingInvoice(uint invoiceId, IList<Article> articles, Company issuer, Company buyer, DateTime issueDate, DateTime transactionDate, DateTime paymentDate, PaymentType paymentType, InvoiceSummary summary, IssuingPerson issuingPerson)
-            : base(invoiceId, articles, issuer, buyer, issueDate, transactionDate, paymentDate, paymentType, summary, issuingPerson)
+        public CorrectingInvoice() { }
+
+        public virtual Invoice InvoiceToCorrect { get; set; }
+
+        public CorrectingInvoice(int invoiceId, IList<Article> articles, Company issuer, Company buyer, DateTime transactionDate, DateTime paymentDate, PaymentType paymentType, IssuingPerson issuingPerson) 
+            : base(invoiceId, articles, issuer, buyer, transactionDate, paymentDate, paymentType, issuingPerson)
         {
         }
-
-        public Invoice InvoiceToCorrect { get; set; }
     }
 }

@@ -4,6 +4,7 @@
     {
         Zero = 0,
         Low = 12,
-        High = 23
+        High = 23,
+        NotDefined
     }
 }

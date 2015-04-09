@@ -5,29 +5,32 @@ namespace Invoices.Domain.Model
 {
     public class Invoice
     {
-        public Invoice(uint invoiceId, IList<Article> articles, Company issuer, Company buyer, DateTime issueDate, DateTime transactionDate, DateTime paymentDate, PaymentType paymentType, InvoiceSummary summary, IssuingPerson issuingPerson)
+        public Invoice() { }
+
+        public Invoice(int invoiceId, IList<Article> articles, Company issuer, Company buyer, DateTime transactionDate, DateTime paymentDate, PaymentType paymentType, IssuingPerson issuingPerson)
         {
             InvoiceId = invoiceId;
             Articles = articles;
             Issuer = issuer;
             Buyer = buyer;
-            IssueDate = issueDate;
             TransactionDate = transactionDate;
             PaymentDate = paymentDate;
             PaymentType = paymentType;
-            Summary = summary;
             IssuingPerson = issuingPerson;
+
+            Summary = new InvoiceSummary(articles);
+            IssueDate = DateTime.Now;
         }
 
-        public uint InvoiceId { get; private set; }
-        public IList<Article> Articles { get; private set; }
-        public Company Issuer { get; private set; }
-        public Company Buyer { get; private set; }
-        public DateTime IssueDate { get; private set; }
-        public DateTime TransactionDate { get; private set; }
-        public DateTime PaymentDate { get; set; }
-        public PaymentType PaymentType { get; set; }
-        public InvoiceSummary Summary { get; private set; }
-        public IssuingPerson IssuingPerson { get; private set; }
+        public virtual int InvoiceId { get; protected set; }
+        public virtual IList<Article> Articles { get; protected set; }
+        public virtual Company Issuer { get; protected set; }
+        public virtual Company Buyer { get; protected set; }
+        public virtual DateTime IssueDate { get; protected set; }
+        public virtual DateTime TransactionDate { get; protected set; }
+        public virtual DateTime PaymentDate { get; set; }
+        public virtual PaymentType PaymentType { get; set; }
+        public virtual InvoiceSummary Summary { get; protected set; }
+        public virtual IssuingPerson IssuingPerson { get; protected set; }
     }
 }

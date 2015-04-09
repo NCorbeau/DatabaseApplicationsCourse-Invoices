@@ -4,11 +4,11 @@ using Invoices.Domain.Model;
 
 namespace Invoices.Domain.Repositories
 {
-    public class CompanyRepository : ICompanyRepository
+    public class CompanyListRepository : ICompanyRepository
     {
         private readonly List<Company> _companyList; 
 
-        public CompanyRepository()
+        public CompanyListRepository()
         {
             _companyList = new List<Company>
             {
@@ -74,12 +74,12 @@ namespace Invoices.Domain.Repositories
             _companyList.Add(company);
         }
 
-        public void Delete(uint id)
+        public void Archive(int id)
         {
             _companyList.Remove(_companyList.Find(c => c.CompanyId == id));
         }
 
-        public Company Find(uint id)
+        public Company Find(int id)
         {
             return _companyList.FirstOrDefault(c => c.CompanyId == id);
         }

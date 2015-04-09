@@ -6,8 +6,8 @@ namespace Invoices.Domain.Repositories
     public interface IArticleRepository
     {
         void Insert(Article article);
-        void Delete(uint id);
-        Article Find(uint id);
+        void Archive(int id);
+        Article Find(int id);
         IList<Article> FindAll();
     }
 }

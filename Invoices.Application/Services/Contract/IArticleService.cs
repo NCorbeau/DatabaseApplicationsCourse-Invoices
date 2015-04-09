@@ -2,12 +2,12 @@
 
 namespace Invoices.Application.Services
 {
-    interface IArticleService
+    public interface IArticleService
     {
         void AddArticle(Article article);
 
-        void DeleteArticle(Article article);
+        void ArchiveArticle(Article article);
 
-        Article GetArticle(uint id);
+        Article GetArticle(int id);
     }
 }

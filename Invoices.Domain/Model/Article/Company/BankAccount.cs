@@ -2,7 +2,8 @@
 {
     public class BankAccount
     {
-        public string BankName { get; set; }
-        public string AccountNumber { get; set; }
+        public virtual int AccountId { get; set; }
+        public virtual string BankName { get; set; }
+        public virtual string AccountNumber { get; set; }
     }
 }

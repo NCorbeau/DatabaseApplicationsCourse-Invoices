@@ -3,6 +3,7 @@
     public enum Unit
     {
         Piece,
-        Kilogram
+        Kilogram,
+        NotSpecified
     }
 }

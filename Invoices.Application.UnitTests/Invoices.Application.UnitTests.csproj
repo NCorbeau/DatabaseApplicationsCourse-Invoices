@@ -35,6 +35,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Moq">
+      <HintPath>..\packages\Moq.4.2.1502.0911\lib\net40\Moq.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -50,7 +53,26 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="CompanyServiceTests.cs" />
+    <Compile Include="InvoiceServiceTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Invoices.Application\Invoices.Application.csproj">
+      <Project>{983A6E85-536E-4A36-978A-37C59C9CC81A}</Project>
+      <Name>Invoices.Application</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Invoices.Domain\Invoices.Domain.csproj">
+      <Project>{C97134F3-9120-43B7-A9B5-67E2E6601E9A}</Project>
+      <Name>Invoices.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Invoices.ObjectMothers\Invoices.ObjectMothers.csproj">
+      <Project>{6F709B8B-55D8-4201-BF7B-3F789C390A34}</Project>
+      <Name>Invoices.ObjectMothers</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

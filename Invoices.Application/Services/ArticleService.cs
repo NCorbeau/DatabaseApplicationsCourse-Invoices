@@ -1,4 +1,5 @@
-﻿using Invoices.Domain.Model;
+﻿using System;
+using Invoices.Domain.Model;
 using Invoices.Domain.Repositories;
 
 namespace Invoices.Application.Services
@@ -14,15 +15,19 @@ namespace Invoices.Application.Services
 
         public void AddArticle(Article article)
         {
-            _articleRepository.Insert(article);
+            article.Price.AdjustPrices();
+            if(_articleRepository.Find(article.ArticleId) == null)
+                _articleRepository.Insert(article);
         }
 
-        public void DeleteArticle(Article article)
+        public void ArchiveArticle(Article article)
         {
-            _articleRepository.Delete(article.ArticleId);
+            if (_articleRepository.Find(article.ArticleId) == null)
+                throw new ArgumentException("Article does not exist");
+            _articleRepository.Archive(article.ArticleId);
         }
 
-        public Article GetArticle(uint id)
+        public Article GetArticle(int id)
         {
             return _articleRepository.Find(id);
         }

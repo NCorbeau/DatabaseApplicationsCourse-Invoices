@@ -2,7 +2,8 @@
 {
     public class VatId
     {
-        public string EuropeanVatId { get; set; }
-        public string PolishVatId { get; set; }
+        public virtual int Id { get; set; }
+        public virtual string EuropeanVatId { get; set; }
+        public virtual string PolishVatId { get; set; }
     }
 }

@@ -4,11 +4,11 @@ using Invoices.Domain.Model;
 
 namespace Invoices.Domain.Repositories
 {
-    public class ArticleRepository : IArticleRepository
+    public class ArticleListRepository : IArticleRepository
     {
         private readonly List<Article> _articleList; 
 
-        public ArticleRepository()
+        public ArticleListRepository()
         {
             _articleList = new List<Article>
             {
@@ -45,12 +45,12 @@ namespace Invoices.Domain.Repositories
             _articleList.Add(article);
         }
 
-        public void Delete(uint id)
+        public void Archive(int id)
         {
             _articleList.Remove(_articleList.First(a => a.ArticleId == id));
         }
 
-        public Article Find(uint id)
+        public Article Find(int id)
         {
             return _articleList.FirstOrDefault(a => a.ArticleId == id);
         }

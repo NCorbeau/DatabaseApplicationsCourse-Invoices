@@ -2,10 +2,11 @@
 {
     public class Address
     {
-        public string Name { get; set; }
-        public string Street { get; set; }
-        public string City { get; set; }
-        public string PostCode { get; set; }
-        public string Country { get; set; }
+        public virtual int AddressId { get; set; }
+        public virtual string Name { get; set; }
+        public virtual string Street { get; set; }
+        public virtual string City { get; set; }
+        public virtual string PostCode { get; set; }
+        public virtual string Country { get; set; }
     }
 }
