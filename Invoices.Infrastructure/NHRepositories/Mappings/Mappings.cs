@@ -31,11 +31,11 @@ namespace Invoices.Infrastructure.NHRepositories.Mappings
             Map(i => i.PaymentType).CustomType<int>();
             References(i => i.Summary).Cascade.All();
             References(i => i.Issuer);
-            References(i => i.Buyer);
+            References(i => i.Buyer).Not.LazyLoad();
             References(i => i.IssuingPerson);
             HasMany(i => i.Articles);
 
-            References(i => i.InvoiceToCorrect);
+            References(i => i.InvoiceToCorrect).LazyLoad();
         }
     }
 
@@ -44,10 +44,16 @@ namespace Invoices.Infrastructure.NHRepositories.Mappings
         public InvoiceSummaryMap()
         {
             Id(i => i.SummaryId);
-            References(i => i.AmountPaid);
-            References(i => i.AmountToPay);
-            HasMany(i => i.TaxSummary).Cascade.All();
-            References(i => i.TotalAmount);
+            Component(i => i.AmountPaid);
+            Component(i => i.AmountToPay);
+            HasMany(i => i.TaxSummary).Component(p =>
+            {
+                p.Map(x => x.Currency).CustomType<int>();
+                p.Map(x => x.GrossAmount);
+                p.Map(x => x.NetAmount);
+                p.Map(x => x.Tax).CustomType<int>();
+            });
+            Component(i => i.TotalAmount);
         }
     }
 
@@ -57,9 +63,9 @@ namespace Invoices.Infrastructure.NHRepositories.Mappings
         {
             Id(i => i.ArticleId);
             Map(i => i.Active);
-            Map(i => i.Name);
+            Map(i => i.Name).LazyLoad();
             Map(i => i.Unit).CustomType<int>();
-            References(i => i.Price).Cascade.All();
+            Component(i => i.Price);
         }
     }
 
@@ -117,12 +123,12 @@ namespace Invoices.Infrastructure.NHRepositories.Mappings
             Id(i => i.CompanyId);
             Map(i => i.Active);
             Map(i => i.Name);
-            References(i => i.Address);
-            References(i => i.BankAccount);
-            References(i => i.Contact);
-            References(i => i.VatId);
+            References(i => i.Address).Cascade.All();
+            References(i => i.BankAccount).Cascade.All();
+            References(i => i.Contact).Cascade.All();
+            References(i => i.VatId).Cascade.All();
 
-            HasMany(i => i.Articles);
+            HasManyToMany(i => i.Articles);
             HasMany(i => i.Customers);
             HasMany(i => i.IssuedInvoices);
         }
@@ -149,11 +155,10 @@ namespace Invoices.Infrastructure.NHRepositories.Mappings
         }
     }
 
-    public class PriceMap : ClassMap<Price>
+    public class PriceMap : ComponentMap<Price>
     {
         public PriceMap()
         {
-            Id(i => i.PriceId);
             Map(i => i.Currency).CustomType<int>();
             Map(i => i.GrossAmount);
             Map(i => i.NetAmount);

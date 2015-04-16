@@ -46,7 +46,7 @@
     <Compile Include="Model\TaxCalculator.cs" />
     <Compile Include="Repositories\IArticleRepository.cs" />
     <Compile Include="Repositories\ICompanyRepository.cs" />
-    <Compile Include="Model\Currency.cs" />
+    <Compile Include="Model\Invoice\Currency.cs" />
     <Compile Include="Model\Invoice\CorrectingInvoice.cs" />
     <Compile Include="Model\Tax.cs" />
     <Compile Include="Model\Article\Company\Address.cs" />

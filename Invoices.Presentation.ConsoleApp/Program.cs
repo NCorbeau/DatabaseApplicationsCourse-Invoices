@@ -35,7 +35,7 @@ namespace Invoices.Presentation.ConsoleApp
                 });
 
             NHDataProvider.Insert(
-                new Company
+                new IssuingCompany
                 {
                     CompanyId = 1,
                     Name = "Testowa firma",
@@ -62,7 +62,7 @@ namespace Invoices.Presentation.ConsoleApp
                         PolishVatId = "4141234124"
                     }
                 },
-                new Company
+                new IssuingCompany
                 {
                     CompanyId = 2,
                     Name = "Inna firma",

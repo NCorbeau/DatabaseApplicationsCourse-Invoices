@@ -27,7 +27,7 @@ namespace Invoices.Infrastructure
             _sessionFactory =
                 Fluently.Configure()
                   .Database(
-                    MsSqlConfiguration.MsSql2012.ConnectionString(c => c.FromConnectionStringWithKey("InvoicesDb"))
+                    MsSqlConfiguration.MsSql2012.ShowSql().ConnectionString(c => c.FromConnectionStringWithKey("InvoicesDb"))
                   )
                   .Mappings(m =>
                     m.FluentMappings.AddFromAssemblyOf<InvoiceMap>())

@@ -50,7 +50,18 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="InvoiceSummaryTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Invoices.Domain\Invoices.Domain.csproj">
+      <Project>{C97134F3-9120-43B7-A9B5-67E2E6601E9A}</Project>
+      <Name>Invoices.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Invoices.ObjectMothers\Invoices.ObjectMothers.csproj">
+      <Project>{6F709B8B-55D8-4201-BF7B-3F789C390A34}</Project>
+      <Name>Invoices.ObjectMothers</Name>
+    </ProjectReference>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
