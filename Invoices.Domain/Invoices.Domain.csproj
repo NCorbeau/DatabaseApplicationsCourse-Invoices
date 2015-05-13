@@ -40,25 +40,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Model\Article\Article.cs" />
-    <Compile Include="Model\Article\Company\IssuingCompany.cs" />
+    <Compile Include="Model\Company\IssuingCompany.cs" />
     <Compile Include="Model\Article\Unit.cs" />
     <Compile Include="Model\Invoice\Role.cs" />
-    <Compile Include="Model\TaxCalculator.cs" />
+    <Compile Include="Model\Article\TaxCalculator.cs" />
     <Compile Include="Repositories\IArticleRepository.cs" />
     <Compile Include="Repositories\ICompanyRepository.cs" />
     <Compile Include="Model\Invoice\Currency.cs" />
     <Compile Include="Model\Invoice\CorrectingInvoice.cs" />
-    <Compile Include="Model\Tax.cs" />
-    <Compile Include="Model\Article\Company\Address.cs" />
-    <Compile Include="Model\Article\Company\BankAccount.cs" />
-    <Compile Include="Model\Article\Company\Company.cs" />
-    <Compile Include="Model\Article\Company\Contact.cs" />
-    <Compile Include="Model\Article\Company\VatId.cs" />
+    <Compile Include="Model\Article\Tax.cs" />
+    <Compile Include="Model\Company\Address.cs" />
+    <Compile Include="Model\Company\BankAccount.cs" />
+    <Compile Include="Model\Company\Company.cs" />
+    <Compile Include="Model\Company\Contact.cs" />
+    <Compile Include="Model\Company\VatId.cs" />
     <Compile Include="Model\Invoice\Invoice.cs" />
     <Compile Include="Model\Invoice\InvoiceSummary.cs" />
     <Compile Include="Model\Invoice\IssuingPerson.cs" />
     <Compile Include="Model\Invoice\PaymentType.cs" />
-    <Compile Include="Model\Price.cs" />
+    <Compile Include="Model\Article\Price.cs" />
     <Compile Include="Repositories\IInvoiceRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

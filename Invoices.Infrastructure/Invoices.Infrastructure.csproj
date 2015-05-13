@@ -65,7 +65,18 @@
     <Compile Include="NHRepositories\ArticleNHRepository.cs" />
     <Compile Include="NHRepositories\CompanyNHRepository.cs" />
     <Compile Include="NHRepositories\InvoiceNHRepository.cs" />
-    <Compile Include="NHRepositories\Mappings\Mappings.cs" />
+    <Compile Include="NHRepositories\Mappings\AddressMap.cs" />
+    <Compile Include="NHRepositories\Mappings\ArticleMap.cs" />
+    <Compile Include="NHRepositories\Mappings\BankAccountMap.cs" />
+    <Compile Include="NHRepositories\Mappings\CompanyMap.cs" />
+    <Compile Include="NHRepositories\Mappings\ContactMap.cs" />
+    <Compile Include="NHRepositories\Mappings\CorrectingInvoiceMap.cs" />
+    <Compile Include="NHRepositories\Mappings\InvoiceMap.cs" />
+    <Compile Include="NHRepositories\Mappings\InvoiceSummaryMap.cs" />
+    <Compile Include="NHRepositories\Mappings\IssuingCompanyMap.cs" />
+    <Compile Include="NHRepositories\Mappings\IssuingPersonMap.cs" />
+    <Compile Include="NHRepositories\Mappings\PriceMap.cs" />
+    <Compile Include="NHRepositories\Mappings\VatIdMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -76,7 +87,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <None Include="app.config" />
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

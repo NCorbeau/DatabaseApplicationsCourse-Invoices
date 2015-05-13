@@ -31,7 +31,7 @@ namespace Invoices.Infrastructure
                   )
                   .Mappings(m =>
                     m.FluentMappings.AddFromAssemblyOf<InvoiceMap>())
-                  .ExposeConfiguration(c => new SchemaExport(c).Execute(true, true, false))
+                  .ExposeConfiguration(c => new SchemaExport(c).Execute(true, false, false))
                   .BuildSessionFactory();
         }
 
